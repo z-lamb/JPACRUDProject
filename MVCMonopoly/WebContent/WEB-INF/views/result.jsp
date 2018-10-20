@@ -8,6 +8,13 @@
 <title>Property Details</title>
 </head>
 <body>
+	<c:choose>
+		<c:when test="${! empty deleteMessage }">
+			<strong><c:out value="${deleteMessage}" /></strong>
+		</c:when>
+	</c:choose>
+
+	<a href="home.do">Home</a>
 	<h2>Property Details</h2>
 	<div>
 		<h4>
@@ -27,7 +34,7 @@
 	<form action="UpdateLand.do?landId=${land.id}" method="post">
 		<input type="submit" value="Edit Property" />
 	</form>
-	<form action="DeleteLand.do?landId=${land.id}" method="post">
+	<form action="deleteLand.do?landId=${land.id}" method="post">
 		<input type="submit" value="Delete" />
 	</form>
 

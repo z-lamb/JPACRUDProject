@@ -68,4 +68,17 @@ public class LandController {
 		}
 		return mv;
 	}
+	
+	@RequestMapping(path = "deleteLand.do", method = RequestMethod.POST)
+	public String deleteLand(Model model, @RequestParam("landId") int id) {
+		boolean delete = landDAO.delete(id);
+		if(delete) {
+			model.addAttribute("deleteMessage", "Your Property was successfully deleted");
+		}
+		else {
+			model.addAttribute("deleteMessage", 
+					"There was an error in deleting your Property. Please try again in a few hours!");
+		}
+		return "result";
+	}
 }

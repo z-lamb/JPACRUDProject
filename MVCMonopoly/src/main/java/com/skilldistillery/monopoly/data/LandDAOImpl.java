@@ -35,8 +35,8 @@ public class LandDAOImpl implements LandDAO {
 		System.out.println(land);
 		em.persist(land);
 		em.flush();
-		if (land.getId() == 0 || land.getName().equals("")) {
-			em.clear();
+		if (land.getId() == 0) {
+			em.getTransaction().rollback();
 		}
 		return land;
 	}

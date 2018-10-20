@@ -10,9 +10,10 @@
 <body>
 	<c:choose>
 		<c:when test="${! empty newLandFailure }">
-			<c:out value="${newLandFailure }" />
+			<p><c:out value="${newLandFailure }" /></p>
 		</c:when>
 	</c:choose>
+	<p><a href="home.do">Home</a></p>
 	<div>
 		<h3>Add New Property</h3>
 		<h4>Please provide the following details for your new Property:</h4>
