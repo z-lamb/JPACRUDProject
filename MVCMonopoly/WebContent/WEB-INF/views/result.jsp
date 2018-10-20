@@ -31,7 +31,7 @@
 		<p>Description: ${land.description }</p>
 	</div>
 
-	<form action="UpdateLand.do?landId=${land.id}" method="post">
+	<form action="getLandForUpdate.do?landId=${land.id}" method="post">
 		<input type="submit" value="Edit Property" />
 	</form>
 	<form action="deleteLand.do?landId=${land.id}" method="post">

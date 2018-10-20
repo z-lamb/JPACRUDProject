@@ -40,7 +40,7 @@ public class LandController {
 	}
 
 	@RequestMapping(path = "addLand.do", method = RequestMethod.GET)
-	public String addNewLandDirect() {
+	public String addNewLandPage() {
 		return "addNewLand";
 	}
 
@@ -79,6 +79,20 @@ public class LandController {
 			model.addAttribute("deleteMessage", 
 					"There was an error in deleting your Property. Please try again in a few hours!");
 		}
+		return "result";
+	}
+	
+	@RequestMapping(path= "getLandForUpdate.do", method = RequestMethod.POST)
+	public String updateLandPage(Model model, @RequestParam("landId") int id) {
+		Land landById = landDAO.getLandById(id);
+		model.addAttribute("land", landById);
+		return "updateLand";
+	}
+	
+	@RequestMapping(path="updateLand.do")
+	public String updateLand(Model model, Land land, @RequestParam("landId") int id) {
+		Land update = landDAO.update(id, land);
+		model.addAttribute("land", update);
 		return "result";
 	}
 }
