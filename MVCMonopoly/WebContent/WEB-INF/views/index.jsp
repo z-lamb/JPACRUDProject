@@ -8,5 +8,6 @@
 </head>
 <body>
 	Testing
+	<a href="home.do">Refresh back to Home</a>
 </body>
 </html>

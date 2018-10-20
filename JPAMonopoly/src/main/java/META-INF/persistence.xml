@@ -10,7 +10,7 @@
     </provider>
 
 		<!-- entities listed here (need fully qualified name) -->
-		<class>com.skilldistillery.jpavideostore.entities.Land</class>
+		<class>com.skilldistillery.monopoly.entities.Land</class>
 		
 
 		<properties>

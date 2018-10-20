@@ -7,16 +7,14 @@
 	<welcome-file-list>
 		<welcome-file>home.do</welcome-file>
 	</welcome-file-list>
-	<!-- <context-param>
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			/WEB-INF/spring/app-context.xml
-		
-		</param-value>
+		<param-value> 
+		/WEB-INF/spring/app-context.xml </param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener> -->
+	</listener>
 
 	<!-- The front controller of this Spring Web application, responsible for 
 		handling all application requests -->
@@ -35,4 +33,5 @@
 		<servlet-name>springDispatcherServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+
 </web-app>
