@@ -1,5 +1,6 @@
 package com.skilldistillery.monopoly.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.skilldistillery.monopoly.data.LandDAO;
 import com.skilldistillery.monopoly.entities.Land;
+import com.skilldistillery.monopoly.entities.LandColor;
+import com.skilldistillery.monopoly.entities.LandStatus;
 
 @Controller
 public class LandController {
@@ -94,5 +97,21 @@ public class LandController {
 		Land update = landDAO.update(id, land);
 		model.addAttribute("land", update);
 		return "result";
+	}
+	
+	@RequestMapping(path="landColorAndStatus.do")
+	public String landByColorAndStatus(Model model) {
+		List<Land> nameColorStatus= new ArrayList<>();
+		List<Object[]> landByColorStatus = landDAO.getLandByNameColorStatus();
+		
+		for (Object[] objects : landByColorStatus) {
+			Land land = new Land();
+			land.setName(objects[0].toString());
+			land.setColor(LandColor.valueOf(objects[1].toString()));
+			land.setStatus(LandStatus.valueOf(objects[2].toString()));
+			nameColorStatus.add(land);
+		}
+		model.addAttribute("landByColorStatus", nameColorStatus);
+		return "colorStatus";
 	}
 }

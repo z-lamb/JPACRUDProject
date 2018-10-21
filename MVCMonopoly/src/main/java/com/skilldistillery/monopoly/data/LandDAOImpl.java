@@ -31,6 +31,18 @@ public class LandDAOImpl implements LandDAO {
 	}
 
 	@Override
+	public List<Object[]> getLandByNameColorStatus() {
+		
+		String query = "SELECT land.name, land.color, land.status " 
+						+ "FROM Land land " 
+						+ "WHERE land.color = 'BROWN' "
+						+ "AND land.status = 'NOT_OWNED'";
+		List<Object[]> resultList = em.createQuery(query, Object[].class).getResultList();
+		
+		return resultList;
+	}
+
+	@Override
 	public Land create(Land land) {
 		System.out.println(land);
 		em.persist(land);

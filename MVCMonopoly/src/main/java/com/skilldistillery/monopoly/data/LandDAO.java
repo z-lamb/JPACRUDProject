@@ -16,5 +16,7 @@ public interface LandDAO {
 
 	List<Land> getAllLands();
 
+	List<Object[]> getLandByNameColorStatus();
+
 	
 }

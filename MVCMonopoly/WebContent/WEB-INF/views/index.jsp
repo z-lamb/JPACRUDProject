@@ -9,8 +9,8 @@
 </head>
 <body>
 	<h2>Welcome to the Monopoly Property Generator</h2>
-	<p>Select a property below to see all the details or create a new
-		one</p>
+	<p>Select a property below to see all the details, create a new
+		one, or see details about groups of properties</p>
 	<form action="getLandById.do" method="GET">
 		<input type="text" name="landId" /> <input type="submit"
 			value="Find Property" />
@@ -19,6 +19,13 @@
 	<form action="addLand.do" method="GET">
 		<input type="submit" value="Add New Property" />
 	</form>
+	<form action="landColorAndStatus.do" method="GET">
+		<input type="submit" value="Get Land By Color And Status" />
+	</form>
+	<form action="landColorAndStatus.do" method="post">
+		
+	</form>
+	
 	<h3>All Properties</h3>
 	<c:forEach var="land" items="${land }">
 		<p>
