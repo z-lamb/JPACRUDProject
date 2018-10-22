@@ -19,9 +19,9 @@ You are start at the landing page of the website. This gives you a few option on
 <p>Any time that you make a request the final page will be the results page to see your request. There is also a home link on every page that will bring you back to the landing page. If you select to add or edit a property you will be brought to a new page that will allow you to do that.</p>
 
 #### File Overview
-![JPAMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/JPAMonopolyFileTree.png height=200px width= 50px "JPAMonopoly File Tree")
+![JPAMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/JPAMonopolyFileTree.png "JPAMonopoly File Tree")
 
-![MVCMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/MVCMonopolyFileTree.png height=200px width= 50px "MVCMonopoly File Tree")
+![MVCMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/MVCMonopolyFileTree.png "MVCMonopoly File Tree")
 
 #### Technologies/Techniques Used
 
@@ -48,6 +48,7 @@ You are start at the landing page of the website. This gives you a few option on
 #### Problems/Issues
 - We got most of the project all set up during class so that we could get started on the project for the weekend. By the time I left class I was getting a 404 Page Not Found each time I tried to access the webpage. I tried fixing this in multiple ways but I don't think any of it worked. Eventually I started a 500 error and based on the course material it provided different trouble shooting techniques. As I tired to do the suggested troubleshooting it made everything worse. I believe the fixes I was trying to do were not going to solve the problem and just made things worse. I finally went nuclear and trashed the whole workspace and started over. I actually believe this was a benefit to me so that I learned how to do everything myself instead of following the instructors instructions when setting up the project.
 - After making the whole project again I was still not able to get to the landing page. I was able to figure out that my issue was either in the web.xml or one of the servlets. I broke my servlets up into the app-context.xml to control the back end connection and Monopoly-servlet.xml to control the front end information. It came down to not having `<context-param>` or `<listener>` in the web.xml. After I added those the program started working.
+- I never incorporate enough time to doing the README.md and I was unable to figure out how to update the size of the file trees.
 
 #### Things we was unable to add or incorporate
 - Provide more ways of searching for properties
