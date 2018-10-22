@@ -25,57 +25,34 @@ You are start at the landing page of the website. This gives you a few option on
 
 #### Technologies/Techniques Used
 
-| New Technologies | Technologies       | Techniques |
-| ---------------- | ------------------ | ---------- |
-| JPA              | MVC                |            |
-| JDBC             | Sprint Tools Suite |            |
-|                  | Enums              |            |
-|                  | Gradle             |            |
-|                  |                    |            |
-
-- created an instance of the main application to be able to launch the app inside of the main and have that be the only method in there.
-- call other methods from classes and pass information to and from them
-- declare and create new objects
-- overloaded method
-- getters/setters
-- toString
-- constructors
-- Interface
-- for loop
-- hashCode
-- equals
-- if statements
-- array list
-- exceptions
-- try/catch
-- driver to access database
-- Connection to database
-- SQL queries
-- Prepared Statement
-- Result set
-- STS
-- MAMP
-- MySQLWorkbench
+| New Technologies   | Technologies       |
+| ------------------ | ------------------ |
+| JPA                | MVC                |
+| JDBC               | Sprint Tools Suite |
+| AWS                | Enums              |
+| Creating Database  | Gradle             |
+|                    | Entities           |
+|                    | Interface          |
+|                    | HTML               |
+|                    | MAMP               |
+|                    | MySQL Workbench    |
+|                    | JUnit Jupiter      |
+|                    | Tomcat Server      |
 
 #### Lessons Learned
-- One lesson that took some time to research how to do was to add multiple sql statements in one connection to the database. To do this though you had to execute the first statement before you could declare the second one.
-- Keep things simple... One way for things to become complicated is when you make something more complicated than it needs to be.
-- Although difficult at times it was good to work on a project with other people. It was helpful for other people to bring their strengths to the group which.
+- If your program blows up, just scrap it and start over (see Problems/Issues).
+- I have a pretty good idea of how everything is connected now. Before this project I was not quit sure how it all worked but now I understand better how the whole process works from the front end to the back.
+- When getting a list of array objects back from the database you need to receive them as `List<Object[]>` instead of the type of object they actually are. It will not work any other way. Then I needed to get the array objects out so that I could actually use them. I was able to use a foreach and I would grab the information from each index and add it to a new object. This object was put into a new list and I returned that list to the .jsp so that I could grab the specific information from the object. When I originally tried to do this I made the items in the array list into one big string so that I could print out the string on the .jsp. But I wanted more control of formating on the front end so that is when I came up with creating a new object instead.
+- Coding always takes more time than you expect.
 
 #### Problems/Issues
-- We had a hard time getting the update to work. The issue was making the controller retain the information that the film had and passing it on to the new page where a user could do the update.
-- We had used code from the previous project in the package com.skilldistillery.film.dao. The SQL Query for the add method had "SELECT ... FROM film JOIN film\_category ..." We had the program to that point to a greater extent. The problem came when we would add a new film but we would not be able to search for that film. We could prove that it was in the database but our website was not able to find it. It was because when we added a film we did not also add a film_category. The fix was to add a second sql statement and execute after the first one so that we could add to a different table. This solved the problem.
-- When a user would choose to list all of the movies that an actor was in the actor would not show at the top of the page but all of the films would be listed.
+- We got most of the project all set up during class so that we could get started on the project for the weekend. By the time I left class I was getting a 404 Page Not Found each time I tried to access the webpage. I tried fixing this in multiple ways but I don't think any of it worked. Eventually I started a 500 error and based on the course material it provided different trouble shooting techniques. As I tired to do the suggested troubleshooting it made everything worse. I believe the fixes I was trying to do were not going to solve the problem and just made things worse. I finally went nuclear and trashed the whole workspace and started over. I actually believe this was a benefit to me so that I learned how to do everything myself instead of following the instructors instructions when setting up the project.
+- After making the whole project again I was still not able to get to the landing page. I was able to figure out that my issue was either in the web.xml or one of the servlets. I broke my servlets up into the app-context.xml to control the back end connection and Monopoly-servlet.xml to control the front end information. It came down to not having `<context-param>` or `<listener>` in the web.xml. After I added those the program started working.
 
 #### Things we was unable to add or incorporate
-- Test Driven Development with JUnit tests
-- A user can add an Actor to the database
-- A user can update or delete an actor
-- A user can add an actor to a film
-- A user can choose to list all inventory items for a film
-- A user can choose to list all rentals of a film, including the customer name and location
+- Provide more ways of searching for properties
 - Use Bootstrap to make the website look better
-- It would have been nice to allow the user to select what details of a movie they would like to see instead of a basic print out of the film or all of the details of a film
+- Add another table to figure out how that process works but we will be learning that this coming week
 
 #### Copyright / Trademark Information
 All rights and trademarks belong to respective parties including but not limited to Hasbro. I do not own the name Monopoly and use of the name does not imply any affiliation with or endorsement by them.
