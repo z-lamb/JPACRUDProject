@@ -51,7 +51,7 @@ You are start at the landing page of the website. This gives you a few option on
 - After making the whole project again I was still not able to get to the landing page. I was able to figure out that my issue was either in the web.xml or one of the servlets. I broke my servlets up into the app-context.xml to control the back end connection and Monopoly-servlet.xml to control the front end information. It came down to not having `<context-param>` or `<listener>` in the web.xml. After I added those the program started working.
 - I never incorporate enough time to doing the README.md and I was unable to figure out how to update the size of the file trees.
 
-#### Things we was unable to add or incorporate
+#### Things I was unable to add or incorporate
 - Provide more ways of searching for properties
 - Use Bootstrap to make the website look better
 - Add another table to figure out how that process works but we will be learning that this coming week
