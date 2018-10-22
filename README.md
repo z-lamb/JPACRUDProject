@@ -10,7 +10,7 @@ This program allows a user to do full CRUD of a database from a web browser. My 
 The program has full web-based C.R.U.D. functionality using Spring MVC and the DAO pattern. The DAO implementation uses JDBC to persist and retrieve data.
 
 #### Package/Class/File Overview
-![Alt text](https://github.com/z-lamb/JPACRUDProject/FileTree/JPAMonopolyFileTree.png "JPAMonopoly File Tree")
+![Alt text](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/JPAMonopolyFileTree.png "JPAMonopoly File Tree")
 
 
 #### Operation/Description of how the program works:
