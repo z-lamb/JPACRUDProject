@@ -9,21 +9,30 @@ This program allows a user to do full CRUD of a database from a web browser. My 
 ### Overview
 The program has full web-based C.R.U.D. functionality using Spring MVC and the DAO pattern. The DAO implementation uses JDBC to persist and retrieve data.
 
-#### Package/Class/File Overview
-![Alt text](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/JPAMonopolyFileTree.png "JPAMonopoly File Tree")
-
-
 #### Operation/Description of how the program works:
 
 You are start at the landing page of the website. This gives you a few option on how you would like to proceed. You are able to look up:
 - A property by its id
 - A property based on color and status
-- Add a new p
-If you look up a film by id or keyword you will see one or more films as requested. You will be given the option to edit or delete the film of your choice. You are always given the option to go to the home page at the top of the screen. If you elect to edit a film it will bring you to another page where you will be able to edit all of the fields of the film. If you elect to delete a film it confirm if the film was deleted.
+- Add a new property
+- Select a property to look at from the list
+<p>Any time that you make a request the final page will be the results page to see your request. There is also a home link on every page that will bring you back to the landing page. If you select to add or edit a property you will be brought to a new page that will allow you to do that.</p>
 
+#### File Overview
+![JPAMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/JPAMonopolyFileTree.png height=200px width= 50px "JPAMonopoly File Tree")
 
+![MVCMonopoly File Tree](https://github.com/z-lamb/JPACRUDProject/blob/master/FileTree/MVCMonopolyFileTree.png height=200px width= 50px "MVCMonopoly File Tree")
 
 #### Technologies/Techniques Used
+
+| New Technologies | Technologies       | Techniques |
+| ---------------- | ------------------ | ---------- |
+| JPA              | MVC                |            |
+| JDBC             | Sprint Tools Suite |            |
+|                  | Enums              |            |
+|                  | Gradle             |            |
+|                  |                    |            |
+
 - created an instance of the main application to be able to launch the app inside of the main and have that be the only method in there.
 - call other methods from classes and pass information to and from them
 - declare and create new objects
