@@ -101,7 +101,6 @@ public class LandController {
 	public String landByColorAndStatus(Model model, @RequestParam("color") LandColor color, @RequestParam("status") LandStatus status) {
 		List<Land> nameColorStatus= new ArrayList<>();
 		List<Object[]> landByColorStatus = landDAO.getLandByNameColorStatus(color, status);
-		
 		for (Object[] objects : landByColorStatus) {
 			Land land = new Land();
 			land.setName(objects[0].toString());

@@ -55,6 +55,7 @@ You are start at the landing page of the website. This gives you a few option on
 - Provide more ways of searching for properties
 - Use Bootstrap to make the website look better
 - Add another table to figure out how that process works but we will be learning that this coming week
+- Validation from the front end so that users would not be able to enter the wrong information
 
 #### Copyright / Trademark Information
 All rights and trademarks belong to respective parties including but not limited to Hasbro. I do not own the name Monopoly and use of the name does not imply any affiliation with or endorsement by them.
