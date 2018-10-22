@@ -8,9 +8,10 @@
 <title>Property Details</title>
 </head>
 <body>
+	
 	<c:choose>
 		<c:when test="${! empty deleteMessage }">
-			<strong><c:out value="${deleteMessage}" /></strong>
+			<p><strong><c:out value="${deleteMessage}" /></strong></p>
 		</c:when>
 	</c:choose>
 

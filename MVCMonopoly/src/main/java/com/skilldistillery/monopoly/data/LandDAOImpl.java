@@ -9,6 +9,8 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.skilldistillery.monopoly.entities.Land;
+import com.skilldistillery.monopoly.entities.LandColor;
+import com.skilldistillery.monopoly.entities.LandStatus;
 
 @Transactional
 @Repository
@@ -31,20 +33,7 @@ public class LandDAOImpl implements LandDAO {
 	}
 
 	@Override
-	public List<Object[]> getLandByNameColorStatus() {
-		
-		String query = "SELECT land.name, land.color, land.status " 
-						+ "FROM Land land " 
-						+ "WHERE land.color = 'BROWN' "
-						+ "AND land.status = 'NOT_OWNED'";
-		List<Object[]> resultList = em.createQuery(query, Object[].class).getResultList();
-		
-		return resultList;
-	}
-
-	@Override
 	public Land create(Land land) {
-		System.out.println(land);
 		em.persist(land);
 		em.flush();
 		if (land.getId() == 0) {
@@ -84,5 +73,16 @@ public class LandDAOImpl implements LandDAO {
 			destroyed = true;
 		}
 		return destroyed;
+	}
+
+	@Override
+	public List<Object[]> getLandByNameColorStatus(LandColor color, LandStatus status) {
+
+		String query = "SELECT land.name, land.color, land.status " + "FROM Land land " + "WHERE land.color = :color "
+				+ "AND land.status = :status";
+		List<Object[]> resultList = em.createQuery(query, Object[].class).setParameter("color", color)
+				.setParameter("status", status).getResultList();
+
+		return resultList;
 	}
 }

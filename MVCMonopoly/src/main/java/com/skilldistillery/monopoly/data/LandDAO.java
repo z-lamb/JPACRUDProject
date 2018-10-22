@@ -3,6 +3,8 @@ package com.skilldistillery.monopoly.data;
 import java.util.List;
 
 import com.skilldistillery.monopoly.entities.Land;
+import com.skilldistillery.monopoly.entities.LandColor;
+import com.skilldistillery.monopoly.entities.LandStatus;
 
 public interface LandDAO {
 
@@ -16,7 +18,5 @@ public interface LandDAO {
 
 	List<Land> getAllLands();
 
-	List<Object[]> getLandByNameColorStatus();
-
-	
+	List<Object[]> getLandByNameColorStatus(LandColor color, LandStatus status);
 }

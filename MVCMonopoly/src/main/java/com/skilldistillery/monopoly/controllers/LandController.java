@@ -49,9 +49,7 @@ public class LandController {
 
 	@RequestMapping(path = "newLand.do", method = RequestMethod.POST)
 	public String addNewLand(Land land, RedirectAttributes redir) {
-		System.out.println(land);
 		Land createdLand = landDAO.create(land);
-		System.out.println(land);
 		if (createdLand == null) {
 			redir.addFlashAttribute("newLandFailure", "Failed to add a new Property");
 		} else {
@@ -99,10 +97,10 @@ public class LandController {
 		return "result";
 	}
 	
-	@RequestMapping(path="landColorAndStatus.do")
-	public String landByColorAndStatus(Model model) {
+	@RequestMapping(path="landColorAndStatus.do", method= RequestMethod.POST)
+	public String landByColorAndStatus(Model model, @RequestParam("color") LandColor color, @RequestParam("status") LandStatus status) {
 		List<Land> nameColorStatus= new ArrayList<>();
-		List<Object[]> landByColorStatus = landDAO.getLandByNameColorStatus();
+		List<Object[]> landByColorStatus = landDAO.getLandByNameColorStatus(color, status);
 		
 		for (Object[] objects : landByColorStatus) {
 			Land land = new Land();

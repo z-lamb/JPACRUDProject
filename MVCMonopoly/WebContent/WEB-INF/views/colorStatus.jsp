@@ -8,6 +8,7 @@
 <title>Land By Color And Status</title>
 </head>
 <body>
+	<p><a href="home.do">Home</a></p>
 	<h2>Land By Color And Status</h2>
 	<c:forEach var="land" items="${landByColorStatus }">
 		<p>${land.name }</p>

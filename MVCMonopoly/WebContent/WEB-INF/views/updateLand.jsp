@@ -7,6 +7,7 @@
 <title>Update Land</title>
 </head>
 <body>
+	<p><a href="home.do">Home</a></p>
 	<div>
 		<h3>Add Update Property</h3>
 		<h4>Please provide the following details to update your Property:</h4>
@@ -15,6 +16,7 @@
 			<label for="color">Color:</label> 
 			<select name="color">
 				<option selected value="NONE">None</option>
+				<option value="BROWN">Brown</option>
 				<option value="LIGHT_BLUE">Light Blue</option>
 				<option value="PINK">Pink</option>
 				<option value="ORANGE">Orange</option>

@@ -21,6 +21,7 @@
 			<label for="name">Name:</label> <input type="text" name="name" value="" /><br>
 			<label for="color">Color:</label> 
 			<select name="color">
+				<option></option>
 				<option selected value="NONE">None</option>
 				<option value="LIGHT_BLUE">Light Blue</option>
 				<option value="PINK">Pink</option>
@@ -32,6 +33,7 @@
 			</select> <br />
 			<label for="type">Type:</label> 
 			<select name="type">
+				<option></option>
 				<option value="GO">GO</option>
 				<option value="PROPERTY">Property</option>
 				<option value="COMMUNITY_CHEST">Community Chest</option>
@@ -50,8 +52,9 @@
 			<label for="numberOfHotels">Number Of Hotels:</label> <input type="number" name="numberOfHotels" /><br>
 			<label for="status">Status:</label>
 			<select name="status">
+				<option></option>
 				<option value="OWNED">Owned</option>
-				<option value="NOT_OWNED">Not Owned</option>
+				<option selected value="NOT_OWNED">Not Owned</option>
 				<option value="MORTGATED">Mortgaged</option>
 			</select> <br />
 			<label for="description">Description:</label> <input type="text" name="description" /><br> 
